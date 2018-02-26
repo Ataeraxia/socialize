@@ -4,6 +4,9 @@ import { render } from "react-dom";
 
 import App from "../imports/ui/App.js";
 
+// Matt Lieber
+//    |
+//   \/
 Meteor.startup(() => {
   render(<App />, document.getElementById("render-target"));
 });
