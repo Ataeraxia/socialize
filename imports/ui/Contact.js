@@ -18,7 +18,7 @@ export default class Contact extends Component {
     const detailsList = isDetails ? this.renderDetails() : "";
 
     const lastContact = isDetails ? (
-      <span>{this.props.contact.details.lastContact.toLocaleString('en-CA', {
+      <span className="last-contact">{this.props.contact.details.lastContact.toLocaleString('en-CA', {
         weekday: 'short',
         day: 'numeric',
         month: 'short',
@@ -29,12 +29,10 @@ export default class Contact extends Component {
     return (
       <li>
         <h2>
-          <span>
+          <div className="name">
           {this.props.contact.name}
-          </span>
-          <span>
-            {lastContact}
-          </span>
+          </div>
+          {lastContact}
         </h2>
       </li>
     );
