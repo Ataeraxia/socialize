@@ -1,0 +1,37 @@
+html, body, #render-target {
+  padding: 0;
+  margin: 0;
+  background-color: #e6efff;
+}
+
+.navbar {
+  background-color: #abb8e5;
+}
+
+.navbar h1 {
+  margin: 0;
+  padding: 0.5rem 1rem;
+  font-weight: normal;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+.navbar a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.contacts-list {
+  display: grid;
+  grid-gap: 1rem;
+  margin: 2rem;
+}
+
+.contacts-list li {
+  background-color: #ced6fa;
+  list-style: none;
+  padding: 1rem;
+  color: #50576a;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.3rem;
+}
