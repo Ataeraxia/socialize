@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
 export default class Contact extends Component {
+  // This does nothing right now
   renderDetails() {
     return (
       <ul>
@@ -13,14 +14,23 @@ export default class Contact extends Component {
   render() {
     const isDetails = this.props.contact.details;
 
+    // This does nothing right now
     const detailsList = isDetails ? this.renderDetails() : "";
+
+    const lastContact = isDetails ? (
+      <span>{this.props.contact.details.lastContact.toLocaleString()}</span>
+    ) : ({});
 
     return (
       <li>
         <h2>
+          <span>
           {this.props.contact.name}
+          </span>
+          <span>
+            {lastContact}
+          </span>
         </h2>
-        {detailsList}
       </li>
     );
   }
