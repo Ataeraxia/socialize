@@ -6,3 +6,4 @@ Mockup of my homepage idea (caution it is very big)
 Details page
 ![](https://trello-attachments.s3.amazonaws.com/5a20577589b5595c5890a607/5a94522e3734d5f9ae57d22c/4645c9a507c31141e964398c45c60cd6/New_Project_1.jpg)
 
+ 
