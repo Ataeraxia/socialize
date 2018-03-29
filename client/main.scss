@@ -4,6 +4,10 @@ html, body, #render-target {
   background-color: #e6efff;
 }
 
+li {
+  list-style: none;
+}
+
 .navbar {
   background-color: #abb8e5;
 }
@@ -27,7 +31,7 @@ html, body, #render-target {
   margin: 2rem 0;
 }
 
-.contacts-list li {
+.contacts-list .contact-page {
   background-color: #ced6fa;
   list-style: none;
   padding: 1rem;
@@ -35,7 +39,7 @@ html, body, #render-target {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.contacts-list li h2 {
+.contacts-list .contact-page h2 {
   font-size: 1.3rem;
   font-weight: normal;
   display: grid;
@@ -47,11 +51,26 @@ html, body, #render-target {
   grid-row-start: 1;
 }
 
+.last-contact, .last-contact-div {
+  font-size: 1rem;
+  background-color: #abb8e5;
+}
+
 .last-contact {
-  grid-column-start: 3;
+  display: grid;
+  padding: 1rem;
+}
+
+.last-contact-label {
+  grid-column-end: 2;
+}
+
+.last-contact-data {
+  grid-column-start: 2;
   grid-row-start: 1;
   justify-self: end;
-  font-size: 1rem;
-  font-style: italic;
-  line-height: 1.5rem;
+}
+
+.contact-page ul {
+  padding: 0;
 }

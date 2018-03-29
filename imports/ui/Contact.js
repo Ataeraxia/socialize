@@ -4,13 +4,25 @@ export default class Contact extends Component {
   // This does nothing right now
   renderDetails() {
     return (
-      <ul>
-        <li>
-          {this.props.contact.details.lastContact.toLocaleString()}
-        </li>
-      </ul>
-    )
+      <div className="last-contact-div">
+        { this.props.contact.details.lastContact &&
+          <li className="last-contact">
+            <span className="last-contact-label">Last Contact:</span><span className="last-contact-data">{this.props.contact.details.lastContact.toLocaleString('en-CA', {
+              weekday: 'short',
+              day: 'numeric',
+              month: 'short',
+              year: 'numeric'
+            })}</span>
+          </li>
+        }
+      </div>
+    );
   }
+
+  checkIsThere(toCheck) {
+    
+  }
+
   render() {
     const isDetails = this.props.contact.details;
 
@@ -26,14 +38,16 @@ export default class Contact extends Component {
       })}</span>
     ) : ({});
 
+    const detailsComp = ( <ul>{this.renderDetails()}</ul> );
+
     return (
-      <li>
+      <li className="contact-page">
         <h2>
           <div className="name">
           {this.props.contact.name}
           </div>
-          {lastContact}
         </h2>
+        {detailsComp}
       </li>
     );
   }
