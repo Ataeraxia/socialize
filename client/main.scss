@@ -1,3 +1,6 @@
+$darkText: #50576a;
+$back3: #abb8e5;
+
 html, body, #render-target {
   padding: 0;
   margin: 0;
@@ -51,7 +54,7 @@ li {
   grid-row-start: 1;
 }
 
-.last-contact, .last-contact-div {
+.last-contact{
   font-size: 1rem;
   background-color: #abb8e5;
 }
@@ -73,4 +76,16 @@ li {
 
 .contact-page ul {
   padding: 0;
+}
+
+.details h3 {
+  font-weight: normal;
+  font-size: 1.1rem;
+  margin-bottom: 0.1rem;
+}
+
+.details hr {
+  color: $back3;
+  border: none;
+  border-top: 1px solid $back3;
 }
