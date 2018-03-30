@@ -20,7 +20,7 @@ export default class NewContactForm extends Component {
     Contacts.insert({
       name: name,
       details: {
-        lastContact: new Date(),
+        lastContact: null,
         numbers: {
           phone: numbersPhone
         }
@@ -37,12 +37,9 @@ export default class NewContactForm extends Component {
       <div className="new-contact-form">
         <form onSubmit={this.handleSubmit.bind(this)}>
           <input type="text" placeholder="Full name" ref="name" />
-          <input
-            type="datetime-local"
-            placeholder="Last contact"
-            ref="lastContact"
-          />
+
           <input type="tel" placeholder="Phone number" ref="numbersPhone" />
+
           <input type="submit" onSubmit={this.handleSubmit.bind(this)} />
         </form>
       </div>
