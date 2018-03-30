@@ -1,5 +1,9 @@
 $darkText: #50576a;
 $back3: #abb8e5;
+$back2: #ced6fa;
+$shadow: rgba(87, 87, 87, 0.753);
+$shadow2: rgba(78, 78, 78, 0.582);
+$highl: rgb(156, 165, 252);
 
 html,
 body,
@@ -22,6 +26,7 @@ li {
   position: fixed;
   width: 100%;
   height: 3.5rem;
+  box-shadow: 0 0.2rem 0.3rem $shadow;
 }
 
 .navbar h1 {
@@ -100,4 +105,48 @@ li {
   border: none;
   border-top: 1px solid $back3;
   margin-bottom: 1rem;
+}
+
+.toggle-new-contact {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  border: none;
+  background-color: rgb(156, 165, 252);
+  color: white;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  z-index: 5000000;
+  box-shadow: rgba(0, 0, 0, 0.29) 0px 3px 10px, rgba(0, 0, 0, 0.29) 0px 3px 10px;
+}
+
+.new-contact-form form {
+  background-color: $back2;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 0.5rem;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  // grid-row-gap: 1rem;
+}
+
+.new-contact-form-name {
+  grid-area: 1/1/2/2;
+}
+
+.new-contact-form-numbers-phone {
+  grid-area: 2/1/3/2;
+}
+
+.new-contact-form-submit {
+  grid-area: 1/2/3/2;
+  margin: 0.5rem 0.5rem;
+  justify-self: center;
+  font-size: 1.5rem;
+  font-weight: normal;
+  width: 3rem;
+  // height: 3rem;
+  color: $darkText;
 }

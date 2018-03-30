@@ -36,7 +36,10 @@ class App extends Component {
           {this.state.isShowNewContactForm && <NewContactForm />}
           <div className="contacts-list">{this.renderContacts()}</div>
 
-          <button onClick={this.handleShowNewContactFormClick.bind(this)}>
+          <button
+            className="toggle-new-contact"
+            onClick={this.handleShowNewContactFormClick.bind(this)}
+          >
             &#43;
           </button>
         </div>

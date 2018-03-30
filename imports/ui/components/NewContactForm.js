@@ -36,13 +36,24 @@ export default class NewContactForm extends Component {
     return (
       <div className="new-contact-form">
         <form onSubmit={this.handleSubmit.bind(this)}>
-          <input type="text" placeholder="Full name" ref="name" />
+          <input
+            type="text"
+            className="new-contact-form-name"
+            placeholder="Full name"
+            ref="name"
+          />
 
-          <input type="tel" placeholder="Phone number" ref="numbersPhone" />
+          <input
+            type="tel"
+            className="new-contact-form-numbers-phone"
+            placeholder="Phone number"
+            ref="numbersPhone"
+          />
 
           <input
             type="submit"
             value="&rarr;"
+            className="new-contact-form-submit"
             onSubmit={this.handleSubmit.bind(this)}
           />
         </form>
