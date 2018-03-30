@@ -42,7 +42,7 @@ export default class NewContactForm extends Component {
 
           <input
             type="submit"
-            value="Add contact"
+            value="&rarr;"
             onSubmit={this.handleSubmit.bind(this)}
           />
         </form>
