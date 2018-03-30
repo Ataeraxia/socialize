@@ -6,6 +6,17 @@ import Contact from "./Contact.js";
 import NewContactForm from "./components/NewContactForm.js";
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { isShowNewContactForm: false };
+  }
+
+  handleShowNewContactFormClick() {
+    this.setState({
+      isShowNewContactForm: !this.state.isShowNewContactForm
+    });
+  }
+
   renderContacts() {
     return this.props.contacts.map(contact => (
       <Contact key={contact._id} contact={contact} />
@@ -22,9 +33,12 @@ class App extends Component {
         </div>
 
         <div className="page">
-          <NewContactForm />
-
+          {this.state.isShowNewContactForm && <NewContactForm />}
           <div className="contacts-list">{this.renderContacts()}</div>
+
+          <button onClick={this.handleShowNewContactFormClick.bind(this)}>
+            &#43;
+          </button>
         </div>
       </div>
     );
