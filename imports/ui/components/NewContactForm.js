@@ -40,7 +40,11 @@ export default class NewContactForm extends Component {
 
           <input type="tel" placeholder="Phone number" ref="numbersPhone" />
 
-          <input type="submit" onSubmit={this.handleSubmit.bind(this)} />
+          <input
+            type="submit"
+            value="Add contact"
+            onSubmit={this.handleSubmit.bind(this)}
+          />
         </form>
       </div>
     );

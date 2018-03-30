@@ -6,33 +6,33 @@ import Contact from "./Contact.js";
 import NewContactForm from "./components/NewContactForm.js";
 
 class App extends Component {
-    renderContacts() {
-        return this.props.contacts.map((contact) => (
-            <Contact key={contact._id} contact={contact} />
-        ));
-    }
+  renderContacts() {
+    return this.props.contacts.map(contact => (
+      <Contact key={contact._id} contact={contact} />
+    ));
+  }
 
-    render() {
-        return (
-            <div className="App"> 
-                <div className="navbar">
-                    <h1>
-                        <a href="/">socialize</a>
-                    </h1>
-                </div>
+  render() {
+    return (
+      <div className="App">
+        <div className="navbar">
+          <h1>
+            <a href="/">socialize</a>
+          </h1>
+        </div>
 
-                <NewContactForm />
+        <div className="page">
+          <NewContactForm />
 
-                <div className="contacts-list">
-                    {this.renderContacts()}
-                </div>
-            </div>
-        );
-    }
+          <div className="contacts-list">{this.renderContacts()}</div>
+        </div>
+      </div>
+    );
+  }
 }
 
 export default withTracker(() => {
-    return {
-        contacts: Contacts.find({}).fetch(),
-    };
+  return {
+    contacts: Contacts.find({}).fetch()
+  };
 })(App);
