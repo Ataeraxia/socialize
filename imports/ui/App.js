@@ -3,6 +3,7 @@ import { withTracker } from "meteor/react-meteor-data";
 
 import { Contacts } from "../api/contacts.js";
 import Contact from "./Contact.js";
+import NewContactForm from "./components/NewContactForm.js";
 
 class App extends Component {
     renderContacts() {
@@ -19,6 +20,8 @@ class App extends Component {
                         <a href="/">socialize</a>
                     </h1>
                 </div>
+
+                <NewContactForm />
 
                 <div className="contacts-list">
                     {this.renderContacts()}
