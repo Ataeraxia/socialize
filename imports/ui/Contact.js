@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 import ContactDetails from "./components/ContactDetails.js";
 
@@ -8,10 +9,12 @@ export default class Contact extends Component {
       <li className="contact-page">
         <h2>
           <div className="name">
-          {this.props.contact.name}
+            <Link to={"/" + this.props.contact._id}>
+              {this.props.contact.name}
+            </Link>
           </div>
         </h2>
-        <ContactDetails details={this.props.contact.details}/>
+        <ContactDetails details={this.props.contact.details} />
       </li>
     );
   }

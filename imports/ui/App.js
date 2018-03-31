@@ -1,9 +1,11 @@
 import React, { Component } from "react";
 import { withTracker } from "meteor/react-meteor-data";
+import { Link, Switch, Route } from "react-router-dom";
 
 import { Contacts } from "../api/contacts.js";
 import Contact from "./Contact.js";
 import NewContactForm from "./components/NewContactForm.js";
+import ContactsIndexPage from "./pages/ContactsIndexPage.js";
 
 class App extends Component {
   constructor(props) {
@@ -28,9 +30,13 @@ class App extends Component {
       <div className="App">
         <div className="navbar">
           <h1>
-            <a href="/">socialize</a>
+            <Link to="/">socialize</Link>
           </h1>
         </div>
+
+        <Switch>
+          <Route exact path="/" component={ContactsIndexPage} />
+        </Switch>
 
         <div className="page">
           {this.state.isShowNewContactForm && <NewContactForm />}
