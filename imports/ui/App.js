@@ -36,6 +36,7 @@ class App extends Component {
 }
 
 export default withTracker(() => {
+  Meteor.subscribe("contacts");
   return {
     contacts: Contacts.find({}).fetch()
   };
