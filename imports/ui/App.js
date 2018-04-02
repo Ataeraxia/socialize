@@ -1,11 +1,12 @@
 import React, { Component } from "react";
 import { withTracker } from "meteor/react-meteor-data";
-import { Link, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Link, Switch, Route } from "react-router-dom";
 
 import { Contacts } from "../api/contacts.js";
 import Contact from "./Contact.js";
 import NewContactForm from "./components/NewContactForm.js";
 import ContactsIndexPage from "./pages/ContactsIndexPage.js";
+import ContactDetailsPage from "./pages/ContactDetailsPage.js";
 
 class App extends Component {
   renderContacts() {
@@ -16,17 +17,20 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <div className="navbar">
-          <h1>
-            <Link to="/">socialize</Link>
-          </h1>
-        </div>
+      <BrowserRouter>
+        <div className="App">
+          <div className="navbar">
+            <h1>
+              <Link to="/">socialize</Link>
+            </h1>
+          </div>
 
-        <Switch>
-          <Route exact path="/" component={ContactsIndexPage} />
-        </Switch>
-      </div>
+          <Switch>
+            <Route exact path="/" component={ContactsIndexPage} />
+            <Route path="/:contactId" component={ContactDetailsPage} />
+          </Switch>
+        </div>
+      </BrowserRouter>
     );
   }
 }
