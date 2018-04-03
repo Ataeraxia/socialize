@@ -11,7 +11,9 @@ class ContactDetailsPage extends Component {
     const { match, location, history, contact } = this.props;
     return (
       <div className="page">
-        <ContactDetails details={contact.details} />
+        {this.props.contact && (
+          <ContactDetails details={this.props.contact.details} />
+        )}
       </div>
     );
   }
