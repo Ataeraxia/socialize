@@ -4,16 +4,14 @@ import { withTracker } from "meteor/react-meteor-data";
 
 import { Contacts } from "../../api/contacts.js";
 
-import ContactDetails from "../components/ContactDetails.js";
+import Contact from "../components/Contact.js";
 
 class ContactDetailsPage extends Component {
   render() {
     const { match, location, history, contact } = this.props;
     return (
-      <div className="page">
-        {this.props.contact && (
-          <ContactDetails details={this.props.contact.details} />
-        )}
+      <div className="contact-page page">
+        {this.props.contact && <Contact contact={this.props.contact} />}
       </div>
     );
   }

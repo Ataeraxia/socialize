@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-import ContactDetails from "./components/ContactDetails.js";
+import ContactDetails from "./ContactDetails.js";
 
 export default class Contact extends Component {
   render() {
     return (
-      <li className="contact-page">
+      <div className="contact-wrapper">
         <h2>
           <div className="name">
             <Link to={"/" + this.props.contact._id}>
@@ -15,7 +15,7 @@ export default class Contact extends Component {
           </div>
         </h2>
         <ContactDetails details={this.props.contact.details} />
-      </li>
+      </div>
     );
   }
 }

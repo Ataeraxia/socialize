@@ -3,7 +3,7 @@ import { withTracker } from "meteor/react-meteor-data";
 import { BrowserRouter, Link, Switch, Route } from "react-router-dom";
 
 import { Contacts } from "../api/contacts.js";
-import Contact from "./Contact.js";
+import Contact from "./components/Contact.js";
 import NewContactForm from "./components/NewContactForm.js";
 import ContactsIndexPage from "./pages/ContactsIndexPage.js";
 import ContactDetailsPage from "./pages/ContactDetailsPage.js";

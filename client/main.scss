@@ -53,21 +53,18 @@ a:visited {
   text-decoration: none;
 }
 
-.contacts-list {
-  display: grid;
-  grid-gap: 1rem;
-  margin: 2rem 0;
-}
-
-.contacts-list .contact-page {
+.contact-page {
   background-color: #ced6fa;
   list-style: none;
-  padding: 1rem;
   color: #50576a;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.contacts-list .contact-page h2 {
+.contact-wrapper {
+  padding: 1rem;
+}
+
+.contact-page h2 {
   font-size: 1.3rem;
   font-weight: normal;
   display: grid;
