@@ -1,9 +1,14 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 
 import ContactDetails from "./ContactDetails.js";
+import { Contacts } from "../../api/contacts.js";
 
 export default class Contact extends Component {
+  handleDelClick() {
+    Contacts.remove({ _id: this.props.contact._id }, { justOne: true });
+    <Redirect to="/" />;
+  }
   render() {
     return (
       <div className="contact-wrapper">
@@ -12,6 +17,9 @@ export default class Contact extends Component {
             <Link to={"/" + this.props.contact._id}>
               {this.props.contact.name}
             </Link>
+          </div>
+          <div className="delete">
+            {this.props && <button onClick={this.handleDelClick}>X</button>}
           </div>
         </h2>
         <ContactDetails details={this.props.contact.details} />
