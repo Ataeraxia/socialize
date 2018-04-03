@@ -19,7 +19,9 @@ export default class Contact extends Component {
             </Link>
           </div>
           <div className="delete">
-            {this.props && <button onClick={this.handleDelClick}>X</button>}
+            {this.props.contact && (
+              <button onClick={this.handleDelClick.bind(this)}>X</button>
+            )}
           </div>
         </h2>
         <ContactDetails details={this.props.contact.details} />
